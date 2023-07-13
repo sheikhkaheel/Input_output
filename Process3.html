@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Details</title>
+</head>
+<body>
+    <h2>Personal Details</h2>
+    <p>First Name :</p>
+    <p>Middle Name :</p>
+    <p>Last Name :</p>
+    <p>Gender :</p>
+    <h2>Location</h2>
+    <p>Country :</p>
+    <p>State :</p>
+    <p>District :</p>
+    <p>Address :</p>
+    <h2>Hobbies</h2>
+    <p>First Hobby :</p>
+    <p>Second Hobby :</p>
+    <p>Third Hobby :</p>
+    
+    <script>
+        queryString = window.location.search;
+        urlparam = new URLSearchParams(queryString);
+
+        let Firstname = urlparam.get('fname');
+        let Middlename = urlparam.get('mname');
+        let Lastname = urlparam.get('lname');
+        let Gender = urlparam.get('gender');
+        let Country = urlparam.get('country');
+        let State = urlparam.get('state');
+        let District = urlparam.get('district');
+        let Address = urlparam.get('address');       
+        let Firsthobby = urlparam.get('fhobby');
+        let Secondhobby = urlparam.get('shobby');
+        let Thirdhobby = urlparam.get('thobby');
+        
+
+        let p0 = document.getElementsByTagName('p')[0];
+        let p1 = document.getElementsByTagName('p')[1];
+        let p2 = document.getElementsByTagName('p')[2];
+        let p3 = document.getElementsByTagName('p')[3];
+        let p4 = document.getElementsByTagName('p')[4];
+        let p5 = document.getElementsByTagName('p')[5];
+        let p6 = document.getElementsByTagName('p')[6];
+        let p7 = document.getElementsByTagName('p')[7];
+        let p8 = document.getElementsByTagName('p')[8];
+        let p9 = document.getElementsByTagName('p')[9];
+        let p10 = document.getElementsByTagName('p')[10];
+
+        p0.innerHTML =`First Name : ${Firstname}`;
+        p1.innerHTML =`Middle Name : ${Middlename}`;
+        p2.innerHTML =`Last Name : ${Lastname}`;
+        p3.innerHTML =`Gender : ${Gender}`;
+        p4.innerHTML =`Country : ${Country}`;
+        p5.innerHTML =`State : ${State}`;
+        p6.innerHTML =`District : ${District}`;
+        p7.innerHTML =`Address : ${Address}`;
+        p8.innerHTML =`First Hobby : ${Firsthobby}`;
+        p9.innerHTML =`Second Hobby : ${Secondhobby}`;
+        p10.innerHTML =`Third Hobby : ${Thirdhobby}`;
+    </script>
+</body>
+</html>
